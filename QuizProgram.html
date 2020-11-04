@@ -1,0 +1,63 @@
+<html>
+  <head>
+     <title>Quiz Program</title>
+     <script>
+      var score = 0;
+      var questionCount = 1;
+      function gradeQuiz()
+      {
+        if(questionCount == 1)
+        {
+          var ans =  document.getElementById("answer").value;  //Question: what year did WW2 end?
+
+           if (ans == "1945")
+           {
+             score = score + 1;
+           }
+
+            document.getElementById("quest").innerHTML = "Who won the american civil war?(Union or confederacy?)";
+          }
+
+          if(questionCount == 2)
+          {
+            var ans =  document.getElementById("answer").value;  //Question: what year did WW2 end?
+
+             if (ans == "Union")
+             {
+               score = score + 1;
+             }
+
+              document.getElementById("quest").innerHTML = "What year did the united states delcare its independence";
+            }
+
+            if(questionCount == 3)
+            {
+              var ans =  document.getElementById("answer").value;  //Question: what year did WW2 end?
+
+               if (ans == "1776")
+               {
+                 score = score + 1;
+               }
+
+                end();
+              }
+
+            questionCount = questionCount +1;
+          }
+
+       function end()
+       {
+          document.getElementById("quest").innerHTML = "Good Job";
+        }
+
+     </script>
+  </head>
+
+  <body>
+    <h2>History Quiz</h2>
+    <span id = "quest">   What year did WW2 end?   </span>
+    <input type = "text" id = "answer">
+    <input type = "button" value = "Submit Answer" onclick = "gradeQuiz()">
+
+     <span> </span>
+</html>
